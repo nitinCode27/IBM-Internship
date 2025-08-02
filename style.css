@@ -1,0 +1,155 @@
+/* Updated Weather App CSS with Enhanced Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+
+.app-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('img/bg-animation.gif') center/cover no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+  filter: blur(4px);
+}
+
+.card {
+  width: 90%;
+  max-width: 470px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #333;
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.search input:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.search button {
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.search button:hover {
+  transform: scale(1.1);
+}
+
+.search button img {
+  width: 20px;
+}
+
+.weather-icon {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.weather h1 {
+  font-size: 64px;
+  margin: 10px 0;
+}
+
+.weather h2 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.col img {
+  width: 40px;
+}
+
+.humidity,
+.wind {
+  font-size: 20px;
+}
+
+.weather {
+  display: none;
+  animation: fadeIn 1s ease forwards;
+}
+
+.error {
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+  color: #ff6b6b;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
